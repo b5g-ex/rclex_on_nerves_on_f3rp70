@@ -20,6 +20,12 @@ config :nerves, :firmware, rootfs_overlay: "rootfs_overlay"
 
 config :nerves, source_date_epoch: "1671105797"
 
+# Generate ROS 2 message types for Rclex
+config :rclex, :ros2_message_types, [
+  "std_msgs/msg/String",
+  "geometry_msgs/msg/Twist",
+  "turtlesim/msg/Pose"
+]
 
 if Mix.target() == :host do
   import_config "host.exs"
