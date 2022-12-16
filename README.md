@@ -68,6 +68,12 @@ iex()> RclexOnNervesOnF3RP70.SubPose.start_pose(10000)
 
 詳細は [rclex_examples/turtle_teleop_rclex](https://github.com/rclex/rclex_examples/tree/main/turtle_teleop_rclex#subsription-of-pose) を参照してください．
 
+## 注意事項
+
+- 別のボードで使用したい場合は mix.exs を編集して作業時の `${MIX_TARGET}` を変更してください．
+- F3RP70 にはEthernetコネクタが2ポートありますが，LAN1(eth0)のみ接続可能となる設定にしています．
+- ファームウェアをSDカードに書き込んだ直後の初回の起動時には，Nervesが立ち上がって `ssh nerves.local` で接続可能になるまで数分ほど掛かります．シリアルケーブル接続できると起動ログが確認できて安心です．詳細は nerves_system_f3rp70 にある[こちらのIssue情報](https://github.com/pojiro/nerves_system_f3rp70/issues/9)をご参照ください．
+
 ## Awesome links!!
 
 * [Nerves Project](https://www.nerves-project.org/)
